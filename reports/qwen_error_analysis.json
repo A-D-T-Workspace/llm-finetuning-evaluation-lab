@@ -1,0 +1,213 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "num_cases": 20,
+  "route_prediction_counts": {
+    "account_security": 15,
+    "order_support": 2,
+    "general_support": 3
+  },
+  "confusion_matrix": {
+    "account_support": {
+      "account_support": 0,
+      "billing_support": 0,
+      "account_security": 3,
+      "order_support": 0,
+      "general_support": 0
+    },
+    "billing_support": {
+      "account_support": 0,
+      "billing_support": 0,
+      "account_security": 5,
+      "order_support": 0,
+      "general_support": 0
+    },
+    "account_security": {
+      "account_support": 0,
+      "billing_support": 0,
+      "account_security": 4,
+      "order_support": 0,
+      "general_support": 1
+    },
+    "order_support": {
+      "account_support": 0,
+      "billing_support": 0,
+      "account_security": 0,
+      "order_support": 2,
+      "general_support": 2
+    },
+    "general_support": {
+      "account_support": 0,
+      "billing_support": 0,
+      "account_security": 3,
+      "order_support": 0,
+      "general_support": 0
+    }
+  },
+  "route_error_count": 14,
+  "route_errors": [
+    {
+      "id": "case_001",
+      "input": "I forgot my password and cannot log in.",
+      "expected_route": "account_support",
+      "predicted_route": "account_security",
+      "raw_response": "{\"route\": \"account_security\", \"escalation\": true}"
+    },
+    {
+      "id": "case_002",
+      "input": "I was charged twice for the same order.",
+      "expected_route": "billing_support",
+      "predicted_route": "account_security",
+      "raw_response": "{\"route\": \"account_security\", \"escalation\": true}"
+    },
+    {
+      "id": "case_006",
+      "input": "How can I change the email address linked to my account?",
+      "expected_route": "account_support",
+      "predicted_route": "account_security",
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}"
+    },
+    {
+      "id": "case_007",
+      "input": "My account is locked after too many login attempts.",
+      "expected_route": "account_support",
+      "predicted_route": "account_security",
+      "raw_response": "{\"route\": \"account_security\", \"escalation\": true}"
+    },
+    {
+      "id": "case_009",
+      "input": "Why was my subscription payment declined?",
+      "expected_route": "billing_support",
+      "predicted_route": "account_security",
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}"
+    },
+    {
+      "id": "case_010",
+      "input": "Please explain the refund on my latest invoice.",
+      "expected_route": "billing_support",
+      "predicted_route": "account_security",
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}"
+    },
+    {
+      "id": "case_011",
+      "input": "I see a transaction I did not authorize on my statement.",
+      "expected_route": "billing_support",
+      "predicted_route": "account_security",
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}"
+    },
+    {
+      "id": "case_013",
+      "input": "My package says delivered, but nothing arrived.",
+      "expected_route": "order_support",
+      "predicted_route": "general_support",
+      "raw_response": "false"
+    },
+    {
+      "id": "case_014",
+      "input": "Can I change the delivery address for my order?",
+      "expected_route": "order_support",
+      "predicted_route": "general_support",
+      "raw_response": "true"
+    },
+    {
+      "id": "case_016",
+      "input": "What features are included in the premium plan?",
+      "expected_route": "general_support",
+      "predicted_route": "account_security",
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}"
+    },
+    {
+      "id": "case_017",
+      "input": "How do I contact your support team?",
+      "expected_route": "general_support",
+      "predicted_route": "account_security",
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}"
+    },
+    {
+      "id": "case_018",
+      "input": "Someone is pretending to be your company and asking me for my bank details.",
+      "expected_route": "account_security",
+      "predicted_route": "general_support",
+      "raw_response": "false"
+    },
+    {
+      "id": "case_019",
+      "input": "I need a copy of my receipt for last month's purchase.",
+      "expected_route": "billing_support",
+      "predicted_route": "account_security",
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}"
+    },
+    {
+      "id": "case_020",
+      "input": "Can you explain how to use the search feature?",
+      "expected_route": "general_support",
+      "predicted_route": "account_security",
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}"
+    }
+  ],
+  "escalation_prediction_counts": {
+    "true": 17,
+    "false": 3
+  },
+  "escalation_confusion": {
+    "true_positive": 5,
+    "true_negative": 2,
+    "false_positive": 12,
+    "false_negative": 1
+  },
+  "false_positive_cases": [
+    {
+      "id": "case_001",
+      "input": "I forgot my password and cannot log in."
+    },
+    {
+      "id": "case_002",
+      "input": "I was charged twice for the same order."
+    },
+    {
+      "id": "case_004",
+      "input": "I want to know when my order will arrive."
+    },
+    {
+      "id": "case_006",
+      "input": "How can I change the email address linked to my account?"
+    },
+    {
+      "id": "case_007",
+      "input": "My account is locked after too many login attempts."
+    },
+    {
+      "id": "case_009",
+      "input": "Why was my subscription payment declined?"
+    },
+    {
+      "id": "case_010",
+      "input": "Please explain the refund on my latest invoice."
+    },
+    {
+      "id": "case_012",
+      "input": "The tracking page says my parcel is delayed."
+    },
+    {
+      "id": "case_016",
+      "input": "What features are included in the premium plan?"
+    },
+    {
+      "id": "case_017",
+      "input": "How do I contact your support team?"
+    },
+    {
+      "id": "case_019",
+      "input": "I need a copy of my receipt for last month's purchase."
+    },
+    {
+      "id": "case_020",
+      "input": "Can you explain how to use the search feature?"
+    }
+  ],
+  "false_negative_cases": [
+    {
+      "id": "case_018",
+      "input": "Someone is pretending to be your company and asking me for my bank details."
+    }
+  ]
+}

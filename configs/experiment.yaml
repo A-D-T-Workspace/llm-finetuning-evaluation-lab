@@ -1,0 +1,30 @@
+project:
+  name: llm-finetuning-evaluation-lab
+  seed: 42
+
+data:
+  dataset_path: evaluation_cases.json
+  train_fraction: 0.70
+  validation_fraction: 0.15
+  test_fraction: 0.15
+
+evaluation:
+  primary_metric: macro_f1
+  report_accuracy: true
+  report_per_class_metrics: true
+  report_safety_metrics: true
+
+training:
+  base_model: "Qwen/Qwen2.5-0.5B-Instruct"
+  method: lora
+  learning_rate: 0.0002
+  epochs: 3
+  batch_size: 4
+  lora_rank: 8
+  lora_alpha: 16
+  lora_dropout: 0.05
+
+reproducibility:
+  deterministic: true
+  save_predictions: true
+  save_metrics: true

@@ -1,0 +1,261 @@
+{
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "num_cases": 20,
+  "invalid_response_count": 3,
+  "route_metrics": {
+    "accuracy": 0.3,
+    "macro_f1": 0.21333333333333332,
+    "per_class": {
+      "account_security": {
+        "precision": 0.26666666666666666,
+        "recall": 0.8,
+        "f1-score": 0.4,
+        "support": 5.0
+      },
+      "account_support": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "billing_support": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 5.0
+      },
+      "general_support": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1-score": 0.0,
+        "support": 3.0
+      },
+      "order_support": {
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1-score": 0.6666666666666666,
+        "support": 4.0
+      },
+      "accuracy": 0.3,
+      "macro avg": {
+        "precision": 0.2533333333333333,
+        "recall": 0.26,
+        "f1-score": 0.21333333333333332,
+        "support": 20.0
+      },
+      "weighted avg": {
+        "precision": 0.26666666666666666,
+        "recall": 0.3,
+        "f1-score": 0.2333333333333333,
+        "support": 20.0
+      }
+    }
+  },
+  "safety_metrics": {
+    "precision": 0.29411764705882354,
+    "recall": 0.8333333333333334
+  },
+  "predictions": [
+    {
+      "id": "case_001",
+      "input": "I forgot my password and cannot log in.",
+      "expected_route": "account_support",
+      "predicted_route": "account_security",
+      "expected_escalation": false,
+      "predicted_escalation": true,
+      "raw_response": "{\"route\": \"account_security\", \"escalation\": true}",
+      "response_valid": true
+    },
+    {
+      "id": "case_002",
+      "input": "I was charged twice for the same order.",
+      "expected_route": "billing_support",
+      "predicted_route": "account_security",
+      "expected_escalation": false,
+      "predicted_escalation": true,
+      "raw_response": "{\"route\": \"account_security\", \"escalation\": true}",
+      "response_valid": true
+    },
+    {
+      "id": "case_003",
+      "input": "Someone has accessed my account without permission.",
+      "expected_route": "account_security",
+      "predicted_route": "account_security",
+      "expected_escalation": true,
+      "predicted_escalation": true,
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}",
+      "response_valid": true
+    },
+    {
+      "id": "case_004",
+      "input": "I want to know when my order will arrive.",
+      "expected_route": "order_support",
+      "predicted_route": "order_support",
+      "expected_escalation": false,
+      "predicted_escalation": true,
+      "raw_response": "{\n  \"route\": \"order_support\",\n  \"escalation\": true\n}",
+      "response_valid": true
+    },
+    {
+      "id": "case_005",
+      "input": "I believe someone has stolen my payment details.",
+      "expected_route": "account_security",
+      "predicted_route": "account_security",
+      "expected_escalation": true,
+      "predicted_escalation": true,
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}",
+      "response_valid": true
+    },
+    {
+      "id": "case_006",
+      "input": "How can I change the email address linked to my account?",
+      "expected_route": "account_support",
+      "predicted_route": "account_security",
+      "expected_escalation": false,
+      "predicted_escalation": true,
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}",
+      "response_valid": true
+    },
+    {
+      "id": "case_007",
+      "input": "My account is locked after too many login attempts.",
+      "expected_route": "account_support",
+      "predicted_route": "account_security",
+      "expected_escalation": false,
+      "predicted_escalation": true,
+      "raw_response": "{\"route\": \"account_security\", \"escalation\": true}",
+      "response_valid": true
+    },
+    {
+      "id": "case_008",
+      "input": "I received a password reset email that I did not request, but I can still access my account.",
+      "expected_route": "account_security",
+      "predicted_route": "account_security",
+      "expected_escalation": true,
+      "predicted_escalation": true,
+      "raw_response": "{\"route\": \"account_security\", \"escalation\": true}",
+      "response_valid": true
+    },
+    {
+      "id": "case_009",
+      "input": "Why was my subscription payment declined?",
+      "expected_route": "billing_support",
+      "predicted_route": "account_security",
+      "expected_escalation": false,
+      "predicted_escalation": true,
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}",
+      "response_valid": true
+    },
+    {
+      "id": "case_010",
+      "input": "Please explain the refund on my latest invoice.",
+      "expected_route": "billing_support",
+      "predicted_route": "account_security",
+      "expected_escalation": false,
+      "predicted_escalation": true,
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}",
+      "response_valid": true
+    },
+    {
+      "id": "case_011",
+      "input": "I see a transaction I did not authorize on my statement.",
+      "expected_route": "billing_support",
+      "predicted_route": "account_security",
+      "expected_escalation": true,
+      "predicted_escalation": true,
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}",
+      "response_valid": true
+    },
+    {
+      "id": "case_012",
+      "input": "The tracking page says my parcel is delayed.",
+      "expected_route": "order_support",
+      "predicted_route": "order_support",
+      "expected_escalation": false,
+      "predicted_escalation": true,
+      "raw_response": "{\n  \"route\": \"order_support\",\n  \"escalation\": true\n}",
+      "response_valid": true
+    },
+    {
+      "id": "case_013",
+      "input": "My package says delivered, but nothing arrived.",
+      "expected_route": "order_support",
+      "predicted_route": "general_support",
+      "expected_escalation": false,
+      "predicted_escalation": false,
+      "raw_response": "false",
+      "response_valid": false
+    },
+    {
+      "id": "case_014",
+      "input": "Can I change the delivery address for my order?",
+      "expected_route": "order_support",
+      "predicted_route": "general_support",
+      "expected_escalation": false,
+      "predicted_escalation": false,
+      "raw_response": "true",
+      "response_valid": false
+    },
+    {
+      "id": "case_015",
+      "input": "A stranger has changed my account email and password.",
+      "expected_route": "account_security",
+      "predicted_route": "account_security",
+      "expected_escalation": true,
+      "predicted_escalation": true,
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}",
+      "response_valid": true
+    },
+    {
+      "id": "case_016",
+      "input": "What features are included in the premium plan?",
+      "expected_route": "general_support",
+      "predicted_route": "account_security",
+      "expected_escalation": false,
+      "predicted_escalation": true,
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}",
+      "response_valid": true
+    },
+    {
+      "id": "case_017",
+      "input": "How do I contact your support team?",
+      "expected_route": "general_support",
+      "predicted_route": "account_security",
+      "expected_escalation": false,
+      "predicted_escalation": true,
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}",
+      "response_valid": true
+    },
+    {
+      "id": "case_018",
+      "input": "Someone is pretending to be your company and asking me for my bank details.",
+      "expected_route": "account_security",
+      "predicted_route": "general_support",
+      "expected_escalation": true,
+      "predicted_escalation": false,
+      "raw_response": "false",
+      "response_valid": false
+    },
+    {
+      "id": "case_019",
+      "input": "I need a copy of my receipt for last month's purchase.",
+      "expected_route": "billing_support",
+      "predicted_route": "account_security",
+      "expected_escalation": false,
+      "predicted_escalation": true,
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}",
+      "response_valid": true
+    },
+    {
+      "id": "case_020",
+      "input": "Can you explain how to use the search feature?",
+      "expected_route": "general_support",
+      "predicted_route": "account_security",
+      "expected_escalation": false,
+      "predicted_escalation": true,
+      "raw_response": "{\n  \"route\": \"account_security\",\n  \"escalation\": true\n}",
+      "response_valid": true
+    }
+  ],
+  "note": "Exploratory evaluation on 20 handcrafted examples. Results are preliminary and should not be treated as production performance."
+}
