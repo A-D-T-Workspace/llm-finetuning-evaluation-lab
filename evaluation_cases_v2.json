@@ -1,0 +1,122 @@
+[
+    {
+      "id": "case_021",
+      "input": "I need to update the phone number on my profile.",
+      "expected_route": "account_support",
+      "expected_escalation": false
+    },
+    {
+      "id": "case_022",
+      "input": "I cannot access my account even though my password is correct.",
+      "expected_route": "account_support",
+      "expected_escalation": false
+    },
+    {
+      "id": "case_023",
+      "input": "I received a login alert from a device I recognize, and I want to review my security settings.",
+      "expected_route": "account_security",
+      "expected_escalation": false
+    },
+    {
+      "id": "case_024",
+      "input": "I want to enable two-factor authentication on my account.",
+      "expected_route": "account_security",
+      "expected_escalation": false
+    },
+    {
+      "id": "case_025",
+      "input": "I think my account has been taken over, and the attacker is making changes right now.",
+      "expected_route": "account_security",
+      "expected_escalation": true
+    },
+    {
+      "id": "case_026",
+      "input": "My monthly subscription renewed, but I no longer want the service.",
+      "expected_route": "billing_support",
+      "expected_escalation": false
+    },
+    {
+      "id": "case_027",
+      "input": "I was billed after cancelling my subscription.",
+      "expected_route": "billing_support",
+      "expected_escalation": false
+    },
+    {
+      "id": "case_028",
+      "input": "There is a large card payment on my account that I did not make.",
+      "expected_route": "billing_support",
+      "expected_escalation": true
+    },
+    {
+      "id": "case_029",
+      "input": "Can you explain the taxes listed on my invoice?",
+      "expected_route": "billing_support",
+      "expected_escalation": false
+    },
+    {
+      "id": "case_030",
+      "input": "My refund has not arrived within the stated processing period.",
+      "expected_route": "billing_support",
+      "expected_escalation": false
+    },
+    {
+      "id": "case_031",
+      "input": "The courier delivered my order to the wrong address.",
+      "expected_route": "order_support",
+      "expected_escalation": false
+    },
+    {
+      "id": "case_032",
+      "input": "I received a damaged item and need to know how to return it.",
+      "expected_route": "order_support",
+      "expected_escalation": false
+    },
+    {
+      "id": "case_033",
+      "input": "My order has not shipped, and the estimated dispatch date has passed.",
+      "expected_route": "order_support",
+      "expected_escalation": false
+    },
+    {
+      "id": "case_034",
+      "input": "Someone changed the delivery address on my order without my permission.",
+      "expected_route": "order_support",
+      "expected_escalation": true
+    },
+    {
+      "id": "case_035",
+      "input": "I want to cancel an order that has not shipped yet.",
+      "expected_route": "order_support",
+      "expected_escalation": false
+    },
+    {
+      "id": "case_036",
+      "input": "Where can I find the terms and conditions for the service?",
+      "expected_route": "general_support",
+      "expected_escalation": false
+    },
+    {
+      "id": "case_037",
+      "input": "Does the premium plan include support on weekends?",
+      "expected_route": "general_support",
+      "expected_escalation": false
+    },
+    {
+      "id": "case_038",
+      "input": "I received a suspicious message claiming to be from your company, but I have not shared any information.",
+      "expected_route": "account_security",
+      "expected_escalation": false
+    },
+    {
+      "id": "case_039",
+      "input": "I need help understanding the difference between the available subscription plans.",
+      "expected_route": "general_support",
+      "expected_escalation": false
+    },
+    {
+      "id": "case_040",
+      "input": "A person is threatening to publish my account information unless I pay them.",
+      "expected_route": "account_security",
+      "expected_escalation": true
+    }
+  ]

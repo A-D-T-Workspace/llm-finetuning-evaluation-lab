@@ -1,0 +1,170 @@
+[
+  {
+    "id": "case_040",
+    "input": "A person is threatening to publish my account information unless I pay them.",
+    "expected_route": "account_security",
+    "expected_escalation": true
+  },
+  {
+    "id": "case_023",
+    "input": "I received a login alert from a device I recognize, and I want to review my security settings.",
+    "expected_route": "account_security",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_032",
+    "input": "I received a damaged item and need to know how to return it.",
+    "expected_route": "order_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_030",
+    "input": "My refund has not arrived within the stated processing period.",
+    "expected_route": "billing_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_039",
+    "input": "I need help understanding the difference between the available subscription plans.",
+    "expected_route": "general_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_007",
+    "input": "My account is locked after too many login attempts.",
+    "expected_route": "account_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_013",
+    "input": "My package says delivered, but nothing arrived.",
+    "expected_route": "order_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_033",
+    "input": "My order has not shipped, and the estimated dispatch date has passed.",
+    "expected_route": "order_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_027",
+    "input": "I was billed after cancelling my subscription.",
+    "expected_route": "billing_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_010",
+    "input": "Please explain the refund on my latest invoice.",
+    "expected_route": "billing_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_004",
+    "input": "I want to know when my order will arrive.",
+    "expected_route": "order_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_008",
+    "input": "I received a password reset email that I did not request, but I can still access my account.",
+    "expected_route": "account_security",
+    "expected_escalation": true
+  },
+  {
+    "id": "case_005",
+    "input": "I believe someone has stolen my payment details.",
+    "expected_route": "account_security",
+    "expected_escalation": true
+  },
+  {
+    "id": "case_029",
+    "input": "Can you explain the taxes listed on my invoice?",
+    "expected_route": "billing_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_006",
+    "input": "How can I change the email address linked to my account?",
+    "expected_route": "account_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_037",
+    "input": "Does the premium plan include support on weekends?",
+    "expected_route": "general_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_003",
+    "input": "Someone has accessed my account without permission.",
+    "expected_route": "account_security",
+    "expected_escalation": true
+  },
+  {
+    "id": "case_038",
+    "input": "I received a suspicious message claiming to be from your company, but I have not shared any information.",
+    "expected_route": "account_security",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_024",
+    "input": "I want to enable two-factor authentication on my account.",
+    "expected_route": "account_security",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_016",
+    "input": "What features are included in the premium plan?",
+    "expected_route": "general_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_028",
+    "input": "There is a large card payment on my account that I did not make.",
+    "expected_route": "billing_support",
+    "expected_escalation": true
+  },
+  {
+    "id": "case_017",
+    "input": "How do I contact your support team?",
+    "expected_route": "general_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_034",
+    "input": "Someone changed the delivery address on my order without my permission.",
+    "expected_route": "order_support",
+    "expected_escalation": true
+  },
+  {
+    "id": "case_009",
+    "input": "Why was my subscription payment declined?",
+    "expected_route": "billing_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_011",
+    "input": "I see a transaction I did not authorize on my statement.",
+    "expected_route": "billing_support",
+    "expected_escalation": true
+  },
+  {
+    "id": "case_001",
+    "input": "I forgot my password and cannot log in.",
+    "expected_route": "account_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_031",
+    "input": "The courier delivered my order to the wrong address.",
+    "expected_route": "order_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_012",
+    "input": "The tracking page says my parcel is delayed.",
+    "expected_route": "order_support",
+    "expected_escalation": false
+  }
+]

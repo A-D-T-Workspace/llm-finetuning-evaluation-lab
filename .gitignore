@@ -1,6 +1,17 @@
 
 .venv/
 __pycache__/
-*.pyc
+*.py[cod]
 .env
 .pytest_cache/
+
+# Model weights and training artifacts
+*.safetensors
+*.bin
+*.pt
+*.pth
+checkpoints/
+outputs/
+
+# Local fine-tuned model adapter
+qwen-routing-lora/

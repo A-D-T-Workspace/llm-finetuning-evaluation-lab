@@ -1,0 +1,38 @@
+[
+  {
+    "id": "case_021",
+    "input": "I need to update the phone number on my profile.",
+    "expected_route": "account_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_018",
+    "input": "Someone is pretending to be your company and asking me for my bank details.",
+    "expected_route": "account_security",
+    "expected_escalation": true
+  },
+  {
+    "id": "case_002",
+    "input": "I was charged twice for the same order.",
+    "expected_route": "billing_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_014",
+    "input": "Can I change the delivery address for my order?",
+    "expected_route": "order_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_020",
+    "input": "Can you explain how to use the search feature?",
+    "expected_route": "general_support",
+    "expected_escalation": false
+  },
+  {
+    "id": "case_026",
+    "input": "My monthly subscription renewed, but I no longer want the service.",
+    "expected_route": "billing_support",
+    "expected_escalation": false
+  }
+]
