@@ -19,8 +19,10 @@ The project emphasizes reproducible experiments, dataset validation, frozen eval
 - **Fine-tuning method:** Low-Rank Adaptation (LoRA)
 - **Python:** 3.12
 - **PyTorch, Transformers, PEFT, scikit-learn**
-- **Development environment:** Cursor
+- **Google Colab:** Cloud-based LoRA training workflow
+- **Cursor:** Local development and evaluation
 - **Hardware:** CPU-only local environment
+
 
 The adapter weights are stored locally and excluded from Git. Reproduce the adapter evaluation only after obtaining the corresponding adapter artifact.
 
